@@ -9,7 +9,7 @@ https://nodejs.org/en/download
 
 Editor de código:
 ```
-->https://code.visualstudio.com/download
+https://code.visualstudio.com/download
 ```
 
 ### Na linha de comando, digite:
