@@ -24,6 +24,6 @@ Editor de código:
 ### Qualquer dúvida, entre em contato com a gente:
 
 ```
-->camila.silva@ges.inatel.br
-->isadora.bello@gec.inatel.br
+camila.silva@ges.inatel.br
+isadora.bello@gec.inatel.br
 ```
