@@ -2,8 +2,8 @@
 
 ## Necessário ter instalado na máquina:
 
-### Node.js
-### ->https://nodejs.org/en/download
+Node.js
+->https://nodejs.org/en/download
 
 ### Editor de código:
 ### ->https://code.visualstudio.com/download
