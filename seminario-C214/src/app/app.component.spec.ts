@@ -21,6 +21,11 @@ describe('AppComponent', () => {
     peso: 90
   }
 
+  const imcInvalidoMock = {
+    altura: 1.39,
+    peso: -1
+  }
+
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -59,5 +64,32 @@ describe('AppComponent', () => {
       resposta = app.resposta;
       expect(resposta).not.toEqual('Obesidade I!');
     })
+
+    it('should call limpaCampos function', () => {
+      spyOn(app, 'limpaCampos');
+      app.entradaDados(imcAPMock.altura, imcAPMock.peso);
+      expect(app.limpaCampos).toHaveBeenCalled();
+    });
+  });
+
+  describe('confereDados', () => {
+    it('should call entradaDados if there is no error', () => {
+      spyOn(app, 'entradaDados');
+      app.confereDados(imcOCIIMock.altura, imcOCIIMock.peso);
+      expect(app.entradaDados).toHaveBeenCalledWith(imcOCIIMock.altura, imcOCIIMock.peso);
+    })
+    // it('should throw an exception if the data is invalid', () => {
+    //   // spyOn(app, 'confereDados');
+
+    //   expect(() => {app.confereDados(imcInvalidoMock.altura, imcInvalidoMock.peso);}).toThrowError('Altura e peso não podem ser 0, altura deve ser superior a 1.40cm e peso superior a 40kg');
+    // });
+  });
+
+  describe('limpaCampos', () => {
+    it('should clean the input fields', () => {
+      app.limpaCampos();
+      expect(app.altura).toEqual(0);
+      expect(app.peso).toEqual(0);
+    });
   });
 });

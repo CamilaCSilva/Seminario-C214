@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { empty } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +19,7 @@ export class AppComponent {
   entradaDados(altura: number, peso: number): number {
 
     this.imc = parseFloat((peso/(altura*altura)).toFixed(2));
+    this.limpaCampos();
 
     if(this.imc < 18.5){
       this.resposta = 'Abaixo do peso!';
@@ -43,6 +46,24 @@ export class AppComponent {
       return this.imc;
     }
     return 0;
+
+  }
+
+  confereDados(altura: number, peso: number): any {
+    try{
+      if(altura < 0 || peso < 0 || altura < 1.40 || peso < 40){
+        throw new Error("Altura e peso não podem ser 0, altura deve ser superior a 1.40cm e peso superior a 40kg");
+      }
+      return this.entradaDados(altura, peso);
+    }
+    catch(exception) {
+      alert(exception);
+    }
+  }
+
+  limpaCampos() {
+    this.altura = 0;
+    this.peso = 0;
   }
 
 }
