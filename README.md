@@ -18,9 +18,23 @@ npm install –g @angular/cli
 
 ```
 
-### Abra o projeto no VS Code, ou no editor de código de sua preferência.
+### Para clonar e abrir o projeto, siga os seguintes passos no seu terminal:
 
-### Abra o terminal na pasta do arquivo em questão e digite o seguinte comando:
+```
+git clone https://github.com/CamilaCSilva/Seminario-C214.git
+```
+
+```
+cd Seminario-C214
+```
+
+```
+code .
+```
+
+### Pronto, agora temos o projeto aberto no VS Code
+
+### Ainda no terminal, na pasta do arquivo, digite:
 ```
 npm i
 ```
@@ -31,6 +45,13 @@ ng s -o
 ```
 
 ### Pronto! Projeto rodando :)
+
+### Para finalizar, só faltam os testes:
+
+```
+ng test
+```
+### Agora sim, 100% feito!
 
 ### Qualquer dúvida, entre em contato com a gente:
 
