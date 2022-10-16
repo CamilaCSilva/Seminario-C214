@@ -26,10 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: '/seminario-C214/package-lock.json'
+        cache-dependency-path: 'seminario-C214/package-lock.json'
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
     - run: |
-        cd /seminario-C214
+        cd seminario-C214
         npm run test
