@@ -46,19 +46,13 @@ export class AppComponent {
       return this.imc;
     }
     return 0;
-
   }
 
   confereDados(altura: number, peso: number): any {
-    try{
-      if(altura < 0 || peso < 0 || altura < 1.40 || peso < 40){
-        throw new Error("Altura e peso não podem ser 0, altura deve ser superior a 1.40cm e peso superior a 40kg");
-      }
-      return this.entradaDados(altura, peso);
+    if(altura < 0 || peso < 0 || altura < 1.40 || peso < 40){
+      throw new Error("Altura e peso não podem ser 0, altura deve ser superior a 1.40cm e peso superior a 40kg");
     }
-    catch(exception) {
-      alert(exception);
-    }
+    return this.entradaDados(altura, peso);
   }
 
   limpaCampos() {

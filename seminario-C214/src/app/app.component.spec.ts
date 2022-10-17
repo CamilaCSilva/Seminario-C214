@@ -78,11 +78,9 @@ describe('AppComponent', () => {
       app.confereDados(imcOCIIMock.altura, imcOCIIMock.peso);
       expect(app.entradaDados).toHaveBeenCalledWith(imcOCIIMock.altura, imcOCIIMock.peso);
     })
-    // it('should throw an exception if the data is invalid', () => {
-    //   // spyOn(app, 'confereDados');
-
-    //   expect(() => {app.confereDados(imcInvalidoMock.altura, imcInvalidoMock.peso);}).toThrowError('Altura e peso não podem ser 0, altura deve ser superior a 1.40cm e peso superior a 40kg');
-    // });
+    it('should throw an exception if the data is invalid', () => {
+      expect(() => { app.confereDados(imcInvalidoMock.altura, imcInvalidoMock.peso); }).toThrowError('Altura e peso não podem ser 0, altura deve ser superior a 1.40cm e peso superior a 40kg');
+    });
   });
 
   describe('limpaCampos', () => {
