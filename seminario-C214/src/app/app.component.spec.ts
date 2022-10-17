@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 
 describe('AppComponent', () => {
 
-  let app: AppComponent;
+  let app: AppComponent; //instancia o componente
   let fixture: ComponentFixture<AppComponent>;
   let imc: number;
   let resposta: string;
@@ -38,9 +38,9 @@ describe('AppComponent', () => {
       ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AppComponent);
-    app = fixture.componentInstance;
-    fixture.detectChanges();
+    fixture = TestBed.createComponent(AppComponent); // cria um componente para testes
+    app = fixture.componentInstance; 
+    fixture.detectChanges(); // faz o data binding com o componente
   });
 
   it('should create the app', () => {
