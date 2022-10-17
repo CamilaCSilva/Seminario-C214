@@ -1,4 +1,4 @@
-# Seminario-C214
+# Seminario-C214 [![Node.js CI](https://github.com/CamilaCSilva/Seminario-C214/actions/workflows/node.js.yml/badge.svg)](https://github.com/CamilaCSilva/Seminario-C214/actions/workflows/node.js.yml)
 
 ### Necessário ter instalado na máquina:
 
